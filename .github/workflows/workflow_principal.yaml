@@ -1,0 +1,11 @@
+name: "Workflow teste"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ver-pasta:
+    uses: ./.github/workflows/workflow-reutilizavel.yaml
+    with:
+      directory_path: "/"
+          
