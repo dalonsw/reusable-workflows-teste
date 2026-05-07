@@ -12,6 +12,6 @@ jobs:
   ver-pasta:
     uses: ./.github/workflows/workflow-reutilizavel.yaml
     with:
-      directory_path: "/"
+      directory_path: ${{ inputs.directory }}
   
           
