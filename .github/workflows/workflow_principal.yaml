@@ -2,10 +2,16 @@ name: "Workflow teste"
 
 on:
   workflow_dispatch:
+    inputs:
+      directory:
+        description: "Diretório da aplicação"
+        required: true
+        type: string
 
 jobs:
   ver-pasta:
     uses: ./.github/workflows/workflow-reutilizavel.yaml
     with:
       directory_path: "/"
+  
           
