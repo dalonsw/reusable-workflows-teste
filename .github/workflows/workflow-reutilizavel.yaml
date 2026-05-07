@@ -11,8 +11,11 @@ on:
 jobs:
   check-repo:
     runs-on: ubuntu-latest
+    outputs:
+      saida: ${{ steps.list-repo }}
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
       - name: List repo
+        id: list-repo
         run: ls ${{ inputs.directory_path }}
